@@ -1,15 +1,16 @@
-
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Layout from './layouts/Layout';
 function App() {
-  
-
   return (
     <>
-     <div className='bg-blue-500 min-h-screen'>
-       hello
-     </div>
+     <Router>
+      <Routes>
+        <Route path="/" element={<Layout><div>Home Page</div></Layout>} />
+        
+      </Routes>
+    </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
